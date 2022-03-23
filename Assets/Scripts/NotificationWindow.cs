@@ -24,13 +24,10 @@ public class NotificationWindow : MonoBehaviour
 
     private void CreateNotifications()
     {
-if(Application.platform == RuntimePlatform.Android)
-    CreateNotificationAndroid();
-else if (Application.platform == RuntimePlatform.OSXPlayer)
-{
-        CreateNotificationIOS();
-    
-}
+        if(Application.platform == RuntimePlatform.Android)
+            CreateNotificationAndroid();
+        else if (Application.platform == RuntimePlatform.OSXPlayer)
+            CreateNotificationIOS();    
     }
 
     private void CreateNotificationAndroid()
